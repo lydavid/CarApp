@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Car App</string>
+    <string name="call_dealer">Call dealer</string>
+    <string name="vehicle_info_header">Vehicle Info</string>
+</resources>
