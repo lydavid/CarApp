@@ -13,7 +13,6 @@ internal class CarListViewModel : ViewModel() {
         CarListService.create()
     }
 
-    // TODO: Cache this locally as well
     internal val carListings = MutableLiveData<List<Listing>>()
 
     init {

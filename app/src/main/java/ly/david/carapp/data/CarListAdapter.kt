@@ -3,9 +3,8 @@ package ly.david.carapp.data
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import ly.david.carapp.R
 import ly.david.carapp.databinding.CarListingBinding
+import ly.david.carapp.loadImageInto
 
 internal class CarListAdapter(
     private val onListingClickListener: (Listing) -> Unit,
@@ -37,20 +36,14 @@ internal class CarListAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(listing: Listing) {
-            Glide.with(binding.root)
-                .load(listing.images.firstImage?.largeImage)
-                .placeholder(android.R.drawable.progress_indeterminate_horizontal)
-                .error(R.drawable.error_icon)
-                .into(binding.image)
-            binding.carListing.setOnClickListener {
-                onListingClickListener(listing)
+            with(binding) {
+                root.loadImageInto(listing.images.firstImage?.largeImage, binding.image)
+                carListing.setOnClickListener { onListingClickListener(listing) }
+                callDealerButton.setOnClickListener { onCallDealerClickListener(listing.dealer.phone) }
+                title.text = listing.getFormattedTitle()
+                subtitle.text = listing.getFormattedSubtitle()
+                location.text = listing.dealer.getFormattedLocation()
             }
-            binding.callDealerButton.setOnClickListener {
-                onCallDealerClickListener(listing.dealer.phone)
-            }
-            binding.title.text = listing.getFormattedTitle()
-            binding.subtitle.text = listing.getFormattedSubtitle()
-            binding.location.text = listing.dealer.getFormattedLocation()
         }
     }
 }
