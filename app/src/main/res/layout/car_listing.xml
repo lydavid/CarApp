@@ -20,12 +20,10 @@
 
     <TextView
         android:id="@+id/title"
+        style="@style/HeaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/standard_padding"
-        android:textColor="@color/black"
-        android:textSize="@dimen/large_font_size"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,22 +32,20 @@
 
     <TextView
         android:id="@+id/subtitle"
+        style="@style/BasicText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/standard_padding"
-        android:textColor="@color/black"
-        android:textSize="@dimen/normal_font_size"
         app:layout_constraintStart_toStartOf="@+id/title"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:text="$ 17,234 | 39.1 mi" />
 
     <TextView
         android:id="@+id/location"
+        style="@style/BasicText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/standard_padding"
-        android:textColor="@color/black"
-        android:textSize="@dimen/normal_font_size"
         app:layout_constraintStart_toStartOf="@+id/subtitle"
         app:layout_constraintTop_toBottomOf="@+id/subtitle"
         tools:text="Highland Park, IL" />

@@ -29,30 +29,26 @@
 
             <TextView
                 android:id="@+id/title"
+                style="@style/HeaderText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/standard_padding"
-                android:textColor="@color/black"
-                android:textSize="@dimen/large_font_size"
-                android:textStyle="bold"
                 tools:text="2011 BMW 3 Series 328i" />
 
             <TextView
                 android:id="@+id/subtitle"
+                style="@style/BasicText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/standard_padding"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_font_size"
                 tools:text="$ 17,234 | 39.1 mi" />
 
             <TextView
                 android:id="@+id/location"
+                style="@style/BasicText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/standard_padding"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_font_size"
                 tools:text="Highland Park, IL" />
 
             <View
@@ -65,23 +61,20 @@
 
             <TextView
                 android:id="@+id/vehicle_info_header"
+                style="@style/HeaderText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/standard_padding"
                 android:text="@string/vehicle_info_header"
-                android:textColor="@color/black"
-                android:textSize="@dimen/large_font_size"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/divider"
                 app:layout_constraintTop_toBottomOf="@id/divider" />
 
             <TextView
                 android:id="@+id/vehicle_info"
+                style="@style/BasicText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/standard_padding"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_font_size"
                 app:layout_constraintStart_toStartOf="@id/vehicle_info_header"
                 app:layout_constraintTop_toBottomOf="@id/vehicle_info_header"
                 tools:text="Location: New York, NY" />
